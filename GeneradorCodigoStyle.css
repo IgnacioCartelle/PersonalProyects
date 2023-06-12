@@ -1,0 +1,1181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+    .content-main .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+.sub-content-main-row {
+    display: flex;
+    position:relative;
+    height: 99%;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+}
+
+.simbologies {
+    position: relative;
+    top: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    border-radius: 20px;
+    font-size: 75%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+    .simbologies input {
+        margin-right: 20px;
+    }
+
+    .simbologies label {
+        font-size: 1.8rem;
+        padding: 1px;
+    }
+
+#ancho {
+    width: 20%;
+}
+
+#alto {
+    width: 20%;
+}
+
+.oned-lineal {
+    display: block;
+    position: relative;
+    flex-direction: column;
+    /*border: 1px solid #002c6c;*/
+    border-radius: 100px;
+}
+
+.scrollTypes {
+    position: relative;
+    border: 1px solid #aaa;
+    width: 100%;
+    top: 0;
+    border-radius: 10px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 0 1rem;
+      background-color: #F0F5FA;
+}
+
+    .scrollTypes label {
+        width: 100%;
+        border-bottom: 1px solid #aaa;
+    }
+
+    .scrollTypes input {
+        margin-left: 20px;
+        margin-right: 2vw;
+    }
+    /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+    .scrollTypes::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+        .scrollTypes::-webkit-scrollbar:vertical {
+            width: 10px;
+        }
+
+    .scrollTypes::-webkit-scrollbar-button:increment, .scrollTypes::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    .scrollTypes::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+
+    .scrollTypes::-webkit-scrollbar-thumb {
+        background-color: #797979;
+        border-radius: 20px;
+        border: 2px solid red;
+    }
+
+    .scrollTypes::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+
+.simbologies h2 {      
+    color: #002c6c;
+    text-align: left;
+    height:40px;
+    vertical-align:central;
+}
+
+.divPopu label {
+    font-size: 1.4vw;
+    font-weight: 400;
+    margin-right: 2vw;
+}
+
+    .divPopu Label:last-child {
+        border-bottom: none;
+    }
+
+
+.twod-qrdt {
+    border: 1px solid #002c6c;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+    .twod-qrdt label {
+        font-size: 1.4vw;
+        font-weight: 400;
+        border-bottom: 1px solid black;
+    }
+
+        .twod-qrdt label:last-child {
+            border-bottom: none;
+        }
+
+    .twod-qrdt h1 {
+        font-size: 1.4vw;
+        border-bottom: 1px solid black;
+        background-color: #002c6c;
+        color: white;
+        text-align: center;
+    }
+
+
+
+    .inputUser p {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+
+    .inputUser .title-result {
+        width: auto;
+        word-wrap: break-word;
+        padding: 20px;
+        font-weight: 700;
+        background-color: white;
+        border: 1.5px solid rgb(8, 96, 168);
+        border-radius: 10px;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .inputUser input {      
+        padding: 5px;
+        width: 100%;
+       
+    }
+
+#textError {
+    text-align: center;
+    margin-top: 10px;
+ 
+}
+
+#textErrorIni {
+    text-align: center;
+    margin-top: 10px;
+ 
+}
+
+#textErrorIniQR {
+    text-align: center;
+    margin-top: 10px;
+ 
+}
+
+.inputUser .generate-code {
+    font-weight: 700;
+    width: auto;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 2px;
+    background-color: #002c6c;
+    color: white;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+    /* Tooltip arrow */
+    .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        bottom: 100%; /* At the top of the tooltip */
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+    }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.generate-code:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.question-info {
+    position: absolute;
+    width: auto;
+    top: 100%;
+    font-weight: bolder;
+    color: rgb(2, 42, 173);   
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.show-download {
+    width: 20%;
+    position: relative;
+    top: 20px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.showImg {
+    position:relative;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    padding: 2vw;
+
+}
+
+    .showImg img {
+        display: block;
+        width: 10vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.downloadSimbology {
+    position:relative;
+    left:20%;
+    font-weight: 700;
+    width: 60%;
+    height: 5vh;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    background-color: #002c6c;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.popUpDownloadFormat {
+    position: relative;
+    width: 20vw;
+    transform: scaleY(0);
+    transform-origin: top;
+    bottom: -1vw;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: space-evenly;
+    border: 2px solid #002c6c;
+}
+
+.popUpDownloadFormatShow {
+    position: relative;
+    width: 20vw;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: all 0.2s ease-in;
+    animation: jump 0.4s;
+    animation-delay: 0.2s;
+    top: 5%;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    justify-content: space-around;
+    border: 2px solid #002c6c;
+}
+
+@keyframes jump {
+    0% {
+        scale: 1;
+    }
+
+    30% {
+        scale: 1.1;
+    }
+
+    50% {
+        scale: 1.2;
+    }
+
+    80% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.popUpDownloadFormat button {
+    background: transparent;
+    border: none;
+}
+
+.popUpDownloadFormat img {
+    width: 3vw;
+    border: none;
+}
+
+.popUpDownloadFormat::after {
+    content: "";
+    position: absolute;
+    bottom: 98%;
+    left: 40%;
+    border-style: solid;
+    border-width: 0 26px 26px;
+    border-color: #fff transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+}
+
+.popUpDownloadFormat::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 40%;
+    border-style: solid;
+    border-width: 0 26px 26px;
+    border-color: #002c6c transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+}
+
+#openPopup {
+    font-weight: bolder;
+    color: rgb(2, 42, 173);
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    cursor: pointer;
+}
+
+.popUpDescription {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-box-shadow: 14px 10px 18px -9px rgba(250,150,0,1);
+    -moz-box-shadow: 14px 10px 18px -9px rgba(250,150,0,1);
+    box-shadow: 14px 10px 18px -9px rgba(250,150,0,1);
+}
+
+    .popUpDescription img {
+        width: 200px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    .popUpDescription button {
+        font-weight: 700;
+        width: 10%;
+        height: 5vh;
+        font-size: 1.8rem;
+        background-color: #002c6c;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+.x-y {
+    display: flex;
+    justify-content: space-around;
+}
+
+#rotate {
+    width: 50%;
+}
+
+.aditional-params {
+    position: relative;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+    .aditional-params h1 {
+        text-decoration: underline;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+.info-params {
+    position: absolute;
+    right: 3%;
+    padding: 0px 5px;
+    margin-right: auto;
+    top: 2%;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    background-color: #002c6c;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.aditional-params input {
+    margin-top: 20px;
+}
+
+.aditional-params p {
+    margin-top: 25px;
+}
+
+.close-button-aditional-params {
+    position: relative;
+    top: 0;
+    right: -90%;
+    color: red;
+    font-size: 14px;
+}
+
+.aditional-params-info {
+    display: none;
+    bottom: 10%;
+    padding: 5px;
+    border-radius: 5px;
+    transform-origin: top;
+    background: #d9edf7;
+    color: white;
+    font-size: 1.2rem;
+    animation-name: aditionalParams;
+    transition: 1s all ease;
+}
+
+.aditional-params-info-show {
+    display: block;
+    padding: 5px;
+    background: #258CCF;
+    border-radius: 5px;
+    width: auto;
+    word-wrap: break-word;
+    transform-origin: top;
+    background: #d9edf7;
+    color: #007d99;
+    font-weight: bold;
+    z-index: 999;
+    font-size: 1.2rem;
+}
+
+.close-popup {
+    width: 10%;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+}
+
+@keyframes aditionalParams {
+    from {
+        transform: scaleY(0);
+        height: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        height: 20vh;
+    }
+}
+
+.rotate {
+    display: flex;
+    justify-content: space-around;
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Posicionamiento del PopUp */
+    padding: 20px;
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+    animation-name: popupAppear; /* Animación de aparición */
+    animation-duration: 0.5s;
+}
+
+    .popup-content span {
+        font-weight: bold;
+    }
+
+    .popup-content p {
+        margin-top: 20px;
+    }
+
+    .popup-content h2 {
+        text-align: center;
+    }
+
+@keyframes popupAppear {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.popup-hide .popup-content {
+    animation-name: popupDisappear; /* Animación de desaparición */
+    animation-duration: 0.5s;
+}
+
+@keyframes popupDisappear {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(100%);
+    }
+}
+
+@media only screen and (max-width : 960px) {
+
+    .content-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+        .content-main .title {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+    .sub-content-main-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .simbologies {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 45%;
+        border-radius: 20px;
+        font-size: 75%;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+
+        .simbologies input {
+            margin-right: 20px;
+        }
+
+        .simbologies label {
+            font-size: 1.8rem;
+            padding: 1px;
+        }
+
+    #ancho {
+        width: 20%;
+    }
+
+    #alto {
+        width: 20%;
+    }
+
+    .oned-lineal {
+        display: block;
+        flex-direction: column;
+        /*border: 1px solid #002c6c;*/
+        border-radius: 100px;
+    }
+
+    .scrollTypes {
+        position: relative;
+        border: 1px solid #002c6c;      
+        width: 100%;
+        top: 0;
+        border-radius: 10px;
+        overflow: auto;
+        box-sizing: border-box;
+        padding: 0 1rem;
+    }
+
+        .scrollTypes label {
+            width: 100%;
+            /*border-bottom: 1px solid black;*/
+        }
+
+        .scrollTypes input {
+            margin-left: 20px;
+            margin-right: 2vw;
+        }
+        /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+        .scrollTypes::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+
+            .scrollTypes::-webkit-scrollbar:vertical {
+                width: 10px;
+            }
+
+        .scrollTypes::-webkit-scrollbar-button:increment, .scrollTypes::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        .scrollTypes::-webkit-scrollbar:horizontal {
+            height: 10px;
+        }
+
+        .scrollTypes::-webkit-scrollbar-thumb {
+            background-color: #797979;
+            border-radius: 20px;
+            border: 2px solid red;
+        }
+
+        .scrollTypes::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+    .simbologies h1 {
+        font-size: 1.5vw;
+        background-color: #002c6c;
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .divPopu label {
+        font-size: 1.4vw;
+        font-weight: 400;
+        margin-right: 2vw;
+    }
+
+        .divPopu Label:last-child {
+            border-bottom: none;
+        }
+
+    .twod-qrdt {
+        border: 1px solid #002c6c;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+    }
+
+        .twod-qrdt label {
+            font-size: 1.4vw;
+            font-weight: 400;
+            border-bottom: 1px solid black;
+        }
+
+            .twod-qrdt label:last-child {
+                border-bottom: none;
+            }
+
+        .twod-qrdt h1 {
+            font-size: 1.4vw;
+            border-bottom: 1px solid black;
+            background-color: #002c6c;
+            color: white;
+            text-align: center;
+        }
+
+    .inputUser {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        justify-content: space-around;
+        margin-left: 10vw;
+    }
+
+        .inputUser p {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .inputUser .title-result {
+            width: auto;
+            word-wrap: break-word;
+            padding: 20px;
+            font-weight: 700;
+            background-color: white;
+            border: 1.5px solid rgb(8, 96, 168);
+            border-radius: 10px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .inputUser input {
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+        }
+
+    #textError {
+        text-align: center;
+        margin-top: 10px;
+        background-color: blanchedalmond;
+    }
+
+    #textErrorIni {
+        text-align: center;
+        margin-top: 10px;
+        background-color: blanchedalmond;
+    }
+
+    #textErrorIniQR {
+        text-align: center;
+        margin-top: 10px;
+        background-color: blanchedalmond;
+    }
+
+    .inputUser .generate-code {
+        font-weight: 700;
+        width: auto;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        padding: 2px;
+        background-color: #002c6c;
+        color: white;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    }
+
+    /* Tooltip text */
+    .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        top: 100%;
+        left: 50%;
+        margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+        /* Tooltip arrow */
+        .tooltiptext::after {
+            content: " ";
+            position: absolute;
+            bottom: 100%; /* At the top of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent black transparent;
+        }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .generate-code:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .question-info {
+        position: absolute;
+        width: auto;
+        top: 100%;
+        font-weight: bolder;
+        color: rgb(2, 42, 173);
+        left: 8%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .show-download {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .showImg {
+        border: 1px solid black;
+        padding: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .showImg img {
+            width: 10vw;
+        }
+
+    .downloadSimbology {
+        font-weight: 700;
+        width: 60%;
+        height: 5vh;
+        font-size: 1.4rem;
+        margin-top: 20px;
+        background-color: #002c6c;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .popUpDownloadFormat {
+        position: relative;
+        width: 20vw;
+        transform: scaleY(0);
+        transform-origin: top;
+        bottom: -1vw;
+        display: flex;
+        padding: 20px;
+        border-radius: 20px;
+        justify-content: space-evenly;
+        border: 2px solid #002c6c;
+    }
+
+    .popUpDownloadFormatShow {
+        position: relative;
+        width: 20vw;
+        transform: scaleY(1);
+        transform-origin: top;
+        transition: all 0.2s ease-in;
+        animation: jump 0.4s;
+        animation-delay: 0.2s;
+        bottom: 12%;
+        display: flex;
+        padding: 20px;
+        border-radius: 20px;
+        justify-content: space-around;
+        border: 2px solid #002c6c;
+    }
+
+    @keyframes jump {
+        0% {
+            scale: 1;
+        }
+
+        30% {
+            scale: 1.1;
+        }
+
+        50% {
+            scale: 1.2;
+        }
+
+        80% {
+            scale: 1.1;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    .popUpDownloadFormat button {
+        background: transparent;
+        border: none;
+    }
+
+    .popUpDownloadFormat img {
+        width: 3vw;
+        border: none;
+    }
+
+    .popUpDownloadFormat::after {
+        content: "";
+        position: absolute;
+        bottom: 98%;
+        left: 40%;
+        border-style: solid;
+        border-width: 0 26px 26px;
+        border-color: #fff transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+    }
+
+    .popUpDownloadFormat::before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 40%;
+        border-style: solid;
+        border-width: 0 26px 26px;
+        border-color: #002c6c transparent;
+        display: block;
+        width: 0;
+        z-index: 0;
+    }
+
+    #openPopup {
+        font-weight: bolder;
+        color: rgb(2, 42, 173);
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        cursor: pointer;
+    }
+
+    .popUpDescription {
+        display: none; /* Inicialmente oculto */
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        -webkit-box-shadow: 14px 10px 18px -9px rgba(250,150,0,1);
+        -moz-box-shadow: 14px 10px 18px -9px rgba(250,150,0,1);
+        box-shadow: 14px 10px 18px -9px rgba(250,150,0,1);
+    }
+
+        .popUpDescription img {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        .popUpDescription button {
+            font-weight: 700;
+            width: 10%;
+            height: 5vh;
+            font-size: 1.8rem;
+            background-color: #002c6c;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    .x-y {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #rotate {
+        width: 50%;
+    }
+
+    .aditional-params {
+        position: relative;
+        padding: 10px;
+        margin-top: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+
+        .aditional-params h1 {
+            text-decoration: underline;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+    .info-params {
+        position: absolute;
+        right: 3%;
+        padding: 0px 5px;
+        margin-right: auto;
+        top: 2%;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 1rem;
+        color: white;
+        background-color: #002c6c;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    .aditional-params input {
+        margin-top: 20px;
+    }
+
+    .aditional-params p {
+        margin-top: 25px;
+    }
+
+    .close-button-aditional-params {
+        position: relative;
+        top: 0;
+        right: -90%;
+        color: red;
+        font-size: 14px;
+    }
+
+    .aditional-params-info {
+        display: none;
+        bottom: 10%;
+        padding: 5px;
+        border-radius: 5px;
+        transform-origin: top;
+        background: #d9edf7;
+        color: white;
+        font-size: 1.2rem;
+        animation-name: aditionalParams;
+        transition: 1s all ease;
+    }
+
+    .aditional-params-info-show {
+        display: block;
+        padding: 5px;
+        background: #258CCF;
+        border-radius: 5px;
+        width: auto;
+        word-wrap: break-word;
+        transform-origin: top;
+        background: #d9edf7;
+        color: #007d99;
+        font-weight: bold;
+        z-index: 999;
+        font-size: 1.2rem;
+    }
+
+    .close-popup {
+        width: 10%;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+        cursor: pointer;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    @keyframes aditionalParams {
+        from {
+            transform: scaleY(0);
+            height: 0;
+        }
+
+        to {
+            transform: scaleY(1);
+            height: 20vh;
+        }
+    }
+
+    .rotate {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .popup-content {
+        background-color: #fefefe;
+        margin: 10% auto; /* Posicionamiento del PopUp */
+        padding: 20px;
+        display: flex;
+        font-size: 1rem;
+        flex-direction: column;
+        border: 1px solid #888;
+        width: 80%;
+        border-radius: 5px;
+        animation-name: popupAppear; /* Animación de aparición */
+        animation-duration: 0.5s;
+    }
+
+        .popup-content span {
+            font-weight: bold;
+        }
+
+        .popup-content p {
+            margin-top: 20px;
+        }
+
+        .popup-content h2 {
+            text-align: center;
+        }
+
+    @keyframes popupAppear {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .popup-hide .popup-content {
+        animation-name: popupDisappear; /* Animación de desaparición */
+        animation-duration: 0.5s;
+    }
+
+    @keyframes popupDisappear {
+        from {
+            transform: translateY(0);
+        }
+
+        to {
+            transform: translateY(100%);
+        }
+    }
+}
